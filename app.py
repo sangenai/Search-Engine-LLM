@@ -6,8 +6,8 @@ from langchain.agents import initialize_agent,AgentType
 from langchain.callbacks.streamlit import StreamlitCallbackHandler  # Updated import
 import os
 from dotenv import load_dotenv
-load_dotenv()
-groq_api_key = os.getenv("GROQ_API_KEY")
+#load_dotenv()
+#groq_api_key = os.getenv("GROQ_API_KEY")
 
 ## Arxiv and wikipedia Tools
 arxiv_wrapper=ArxivAPIWrapper(top_k_results=1, doc_content_chars_max=200)
@@ -20,13 +20,13 @@ search=DuckDuckGoSearchRun(name="Search")
 
 
 st.title("🔎 LangChain Implementaion- Chat with Sanjeev's Search Engine")
-st.secrets["GROQ_API_KEY"]
+#st.secrets["GROQ_API_KEY"]
 
 
 ## Sidebar for settings
 st.sidebar.title("Settings")
 api_key=st.sidebar.text_input("Enter your Groq API Key:",type="password")
-api_key=groq_api_key
+#api_key=groq_api_key
 
 if "messages" not in st.session_state:
     st.session_state["messages"]=[
