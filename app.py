@@ -20,6 +20,7 @@ search=DuckDuckGoSearchRun(name="Search")
 
 
 st.title("🔎 LangChain Implementaion- Chat with Sanjeev's Search Engine")
+st.secrets["GROQ_API_KEY"]
 
 
 ## Sidebar for settings
